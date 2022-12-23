@@ -186,22 +186,20 @@ function makeCard(obj) {
 
 wrapperCards.innerHTML = bufferStr;
 
-let closePopup;
-
+const closePopup = document.getElementById('close-popup');
 function closePopupFunc() {
   const popupWindow = document.querySelector('#popup-window');
   popupWindow.innerHTML = '';
   popupWindow.style.display = 'none';
 }
+closePopup.addEventListener('click', closePopupFunc);
 
 const cardIntro = document.querySelector('#button-card-intro');
 
 function displayIntro() {
   const popupWindow = document.querySelector('#popup-window');
   popupWindow.innerHTML = makeCard(introObj);
-  popupWindow.style.display = 'block';
-  closePopup = document.getElementById('close-popup');
-  closePopup.addEventListener('click', closePopupFunc);
+  popupWindow.style.display = 'block';    
 }
 cardIntro.addEventListener('click', displayIntro);
 
@@ -209,9 +207,7 @@ const card0 = document.querySelector('#button-card-0');
 function displayCard0() {
   const popupWindow = document.querySelector('#popup-window');
   popupWindow.innerHTML = makeCard(cardsInfo[0]);
-  popupWindow.style.display = 'block';
-  closePopup = document.getElementById('close-popup');
-  closePopup.addEventListener('click', closePopupFunc);
+  popupWindow.style.display = 'block';  
 }
 card0.addEventListener('click', displayCard0);
 
@@ -219,9 +215,7 @@ const card1 = document.querySelector('#button-card-1');
 function displayCard1() {
   const popupWindow = document.querySelector('#popup-window');
   popupWindow.innerHTML = makeCard(cardsInfo[1]);
-  popupWindow.style.display = 'block';
-  closePopup = document.getElementById('close-popup');
-  closePopup.addEventListener('click', closePopupFunc);
+  popupWindow.style.display = 'block';  
 }
 card1.addEventListener('click', displayCard1);
 
@@ -230,8 +224,6 @@ function displayCard2() {
   const popupWindow = document.querySelector('#popup-window');
   popupWindow.innerHTML = makeCard(cardsInfo[2]);
   popupWindow.style.display = 'block';
-  closePopup = document.getElementById('close-popup');
-  closePopup.addEventListener('click', closePopupFunc);
 }
 card2.addEventListener('click', displayCard2);
 
@@ -239,9 +231,7 @@ const card3 = document.querySelector('#button-card-3');
 function displayCard3() {
   const popupWindow = document.querySelector('#popup-window');
   popupWindow.innerHTML = makeCard(cardsInfo[3]);
-  popupWindow.style.display = 'block';
-  closePopup = document.getElementById('close-popup');
-  closePopup.addEventListener('click', closePopupFunc);
+  popupWindow.style.display = 'block';  
 }
 card3.addEventListener('click', displayCard3);
 
@@ -249,11 +239,8 @@ const card4 = document.querySelector('#button-card-4');
 function displayCard4() {
   const popupWindow = document.querySelector('#popup-window');
   popupWindow.innerHTML = makeCard(cardsInfo[4]);
-  popupWindow.style.display = 'block';
-  closePopup = document.getElementById('close-popup');
-  closePopup.addEventListener('click', closePopupFunc);
+  popupWindow.style.display = 'block';  
 }
-
 card4.addEventListener('click', displayCard4);
 
 const card5 = document.querySelector('#button-card-5');
@@ -261,7 +248,5 @@ function displayCard5() {
   const popupWindow = document.querySelector('#popup-window');
   popupWindow.innerHTML = makeCard(cardsInfo[5]);
   popupWindow.style.display = 'block';
-  closePopup = document.getElementById('close-popup');
-  closePopup.addEventListener('click', closePopupFunc);
 }
 card5.addEventListener('click', displayCard5);
